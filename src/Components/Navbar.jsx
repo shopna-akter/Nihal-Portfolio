@@ -1,11 +1,11 @@
 
 const Navbar = () => {
     const navigations = <>
-        <a className="mr-2 btn" href="">About Me</a>
-        <a className="mr-2 btn" href="">Skills</a>
-        <a className="mr-2 btn" href="">Projects</a>
-        <a className="mr-2 btn" href="">Certificates</a>
-        <a className="mr-2 btn" href="">Contact Me</a>
+        <a className="mr-2 btn bg-gradient-to-r from-purple-700 to-blue-300" href="">About Me</a>
+        <a className="mr-2 btn bg-gradient-to-r from-purple-700 to-blue-300" href="">Skills</a>
+        <a className="mr-2 btn bg-gradient-to-r from-purple-700 to-blue-300" href="">Projects</a>
+        <a className="mr-2 btn bg-gradient-to-r from-purple-700 to-blue-300" href="">Certificates</a>
+        <a className="mr-2 btn bg-gradient-to-r from-purple-700 to-blue-300" href="">Contact Me</a>
     </>
     return (
         <div>
@@ -26,10 +26,13 @@ const Navbar = () => {
                                     d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {navigations}
                         </ul>
                     </div>
+                    <a className="btn btn-ghost text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
