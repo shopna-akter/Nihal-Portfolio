@@ -16,7 +16,7 @@ export default {
         move: 'move 1s infinite alternate',
       },
       boxShadow: {
-        'light': '0 4px 6px rgba(0, 0, 0, 0.1)',
+        'light': '0 4px 6px rgba(255, 255, 255, 0.5)',
       },
     },
   },

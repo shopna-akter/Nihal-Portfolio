@@ -1,15 +1,20 @@
+import Aos from "aos";
+import { useEffect } from "react";
 import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiCss3 } from "react-icons/si";
 
 const MySkills = () => {
+    useEffect(() => {
+        Aos.init({ duration: 3000 })
+    }, [])
     return (
-        <div className="card w-full max-w-md mx-auto p-8 shadow-2xl bg-[#2a2a2b]">
+        <div data-aos="fade-left" className="card w-[500px] p-8 shadow-2xl bg-[#2a2a2b]">
             <div className="card-body text-center">
                 <h2 className="card-title text-2xl text-white mb-4">About My Skills</h2>
                 <hr className="mb-4" />
                 <h2 className="text-xl card-title text-gray-400 mb-8">Primary Skills On</h2>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
-                    <div className="w-20 h-20 bg-[#2a2a2b] flex items-center justify-center rounded-full shadow-lg animate-move">
+                    <div className="w-20 h-20 bg-[#2a2a2b] flex items-center justify-center rounded-full animate-move shadow-lg">
                         <FaHtml5 className="w-12 h-12 text-yellow-500" />
                     </div>
                     <div className="w-20 h-20 bg-[#2a2a2b] flex items-center justify-center rounded-full shadow-lg animate-move">
