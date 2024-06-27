@@ -1,7 +1,12 @@
+import Aos from "aos";
+import { useEffect } from "react";
 
 const ContactMe = () => {
+    useEffect(() => {
+        Aos.init({ duration: 3000 })
+    }, [])
     return (
-        <div className="bg-[#2a2a2b]">
+        <div data-aos="fade-left" className="bg-[#2a2a2b]">
             <div className="w-[500px] shadow-2xl mt-6 p-8 ">
                 <h2 className="text-2xl card-title font-bold text-gray-400">Contact With Me</h2>
                 <div>
@@ -54,7 +59,7 @@ const ContactMe = () => {
                         </div>
                         <div className="flex justify-center">
                             <button
-                                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8  focus:outline-none focus:shadow-outline transition duration-300  rounded ease-in-out transform hover:scale-105 flex items-center justify-center"
+                                className="bg-gradient-to-br from-[#1e2024] to-[#23272b] text-[#ff014f] font-bold py-3 px-8  focus:outline-none focus:shadow-outline transition duration-300  rounded ease-in-out transform hover:scale-105 flex items-center justify-center"
                                 type="submit"
                             >
                                 Send Message
