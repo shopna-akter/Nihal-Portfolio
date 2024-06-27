@@ -1,5 +1,6 @@
 import Aboutme from "./Components/AboutMe/Aboutme";
 import ContactMe from "./Components/ContactMe";
+import Footer from "./Components/Footer";
 import MyProjects from "./Components/MyProjects";
 import MySkills from "./Components/MySkills";
 import Navbar from "./Components/Navbar";
@@ -29,6 +30,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
