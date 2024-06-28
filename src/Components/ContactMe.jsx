@@ -1,12 +1,26 @@
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import 'aos/dist/aos.css';
 const ContactMe = () => {
+    const [aosType, setAosType] = useState('fade-left');
+
     useEffect(() => {
-        Aos.init({ duration: 3000 })
-    }, [])
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setAosType('fade-down');
+            } else {
+                setAosType('fade-left');
+            }
+        };
+        Aos.init({ duration: 3000 });
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <div data-aos="fade-left" className="bg-[#2a2a2b]">
+        <div data-aos={aosType} className="bg-[#2a2a2b]">
             <div className="w-[500px] shadow-2xl mt-6 p-8 ">
                 <h2 className="text-2xl card-title font-bold text-gray-400">Contact With Me</h2>
                 <div>

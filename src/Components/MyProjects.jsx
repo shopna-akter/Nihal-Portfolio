@@ -1,13 +1,27 @@
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import 'aos/dist/aos.css';
 const MyProjects = () => {
+    const [aosType, setAosType] = useState('fade-left');
+
     useEffect(() => {
-        Aos.init({ duration: 3000 })
-    }, [])
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setAosType('fade-down');
+            } else {
+                setAosType('fade-left');
+            }
+        };
+        Aos.init({ duration: 3000 });
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
         <div>
-            <div data-aos="fade-left"  className="card w-full">
+            <div data-aos={aosType}  className="card w-full">
                 <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
                     <img
                         src="https://i.ibb.co/m6kwRW9/Screenshot-2.png"
@@ -29,7 +43,7 @@ const MyProjects = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-left" className="card w-full">
+            <div data-aos={aosType} className="card w-full">
                 <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
                     {/* <figure> */}
                     <img
@@ -52,7 +66,7 @@ const MyProjects = () => {
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-left" className="card w-full">
+            <div data-aos={aosType} className="card w-full">
                 <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
                     {/* <figure> */}
                     <img

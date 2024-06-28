@@ -1,14 +1,28 @@
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiCss3 } from "react-icons/si";
 import 'aos/dist/aos.css';
 const MySkills = () => {
+    const [aosType, setAosType] = useState('fade-left');
+
     useEffect(() => {
-        Aos.init({ duration: 3000 })
-    }, [])
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setAosType('fade-down');
+            } else {
+                setAosType('fade-left');
+            }
+        };
+        Aos.init({ duration: 3000 });
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <div data-aos="fade-left" className="card w-[500px] p-8 shadow-2xl bg-[#2a2a2b]">
+        <div data-aos={aosType} className="card w-[500px] p-8 shadow-2xl bg-[#2a2a2b]">
             <div className="card-body text-center">
                 <h2 className="card-title text-2xl text-white mb-4">About My Skills</h2>
                 <hr className="mb-4" />
