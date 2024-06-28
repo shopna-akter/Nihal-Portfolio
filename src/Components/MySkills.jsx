@@ -2,7 +2,7 @@ import Aos from "aos";
 import { useEffect } from "react";
 import { FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import { SiCss3 } from "react-icons/si";
-
+import 'aos/dist/aos.css';
 const MySkills = () => {
     useEffect(() => {
         Aos.init({ duration: 3000 })
@@ -13,7 +13,7 @@ const MySkills = () => {
                 <h2 className="card-title text-2xl text-white mb-4">About My Skills</h2>
                 <hr className="mb-4" />
                 <h2 className="text-xl card-title text-gray-400 mb-8">Primary Skills On</h2>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
+                <div className="grid grid-cols-3 gap-2">
                     <div className="w-20 h-20 bg-[#2a2a2b] flex items-center justify-center rounded-full animate-move shadow-lg">
                         <FaHtml5 className="w-12 h-12 text-yellow-500" />
                     </div>
@@ -34,7 +34,7 @@ const MySkills = () => {
                     </div>
                 </div>
                 <h2 className="text-xl card-title text-gray-400 my-6">Secondary Skills On</h2>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-2">
+                <div className="grid grid-cols-3 gap-2">
                     <div className="w-20 h-20 bg-[#2a2a2b] flex items-center justify-center rounded-full shadow-lg animate-move">
                         <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" className="w-12 h-12" />
                     </div>
