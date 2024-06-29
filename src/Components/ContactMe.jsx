@@ -21,8 +21,8 @@ const ContactMe = () => {
     }, []);
     return (
         <div data-aos={aosType} className="bg-[#2a2a2b]">
-            <div className="w-[500px] shadow-2xl mt-6 p-8 ">
-                <h2 className="text-2xl card-title font-bold text-gray-400">Contact With Me</h2>
+            <div className="lg:w-[500px] w-full shadow-2xl mt-6 p-8 ">
+                <h2 className="text-2xl card-title font-bold text-white">Contact With Me</h2>
                 <div>
                     <form className="w-full max-w-3xl rounded-lg p-8 space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

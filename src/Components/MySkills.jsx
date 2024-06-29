@@ -22,7 +22,7 @@ const MySkills = () => {
         };
     }, []);
     return (
-        <div data-aos={aosType} className="card w-[500px] p-8 shadow-2xl bg-[#2a2a2b]">
+        <div data-aos={aosType} className="card w-full lg:w-[500px] p-8 shadow-2xl bg-[#2a2a2b]">
             <div className="card-body text-center">
                 <h2 className="card-title text-2xl text-white mb-4">About My Skills</h2>
                 <hr className="mb-4" />

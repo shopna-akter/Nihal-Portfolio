@@ -22,7 +22,7 @@ const MyProjects = () => {
     return (
         <div>
             <div data-aos={aosType}  className="card w-full">
-                <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
+                <div className="card bg-[#2a2a2b] lg:w-[500px] p-8 customShadow shadow-2xl my-10">
                     <img
                         src="https://i.ibb.co/m6kwRW9/Screenshot-2.png"
                         alt="Project" className="rounded-md" />
@@ -44,7 +44,7 @@ const MyProjects = () => {
                 </div>
             </div>
             <div data-aos={aosType} className="card w-full">
-                <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
+                <div className="card bg-[#2a2a2b] lg:w-[500px] p-8 customShadow shadow-2xl my-10">
                     {/* <figure> */}
                     <img
                         src="https://i.ibb.co/RvWKwwy/1719360775052.jpg"
@@ -67,7 +67,7 @@ const MyProjects = () => {
                 </div>
             </div>
             <div data-aos={aosType} className="card w-full">
-                <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl my-10">
+                <div className="card bg-[#2a2a2b] lg:w-[500px] p-8 customShadow shadow-2xl my-10">
                     {/* <figure> */}
                     <img
                         src="https://i.ibb.co/ryLgxpX/Banner.png"

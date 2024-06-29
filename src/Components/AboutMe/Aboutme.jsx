@@ -1,7 +1,7 @@
 import 'aos/dist/aos.css';
 const Aboutme = () => {
     return (
-        <div className="card bg-[#2a2a2b] w-[500px] p-8 customShadow shadow-2xl mb-10">
+        <div className="card bg-[#2a2a2b] w-full lg:w-[500px] p-8 customShadow shadow-2xl mb-10">
             <div className="card-body">
                 <h2 className="card-title text-2xl text-white">About Me</h2>
                 <hr className="bg-black"/>
